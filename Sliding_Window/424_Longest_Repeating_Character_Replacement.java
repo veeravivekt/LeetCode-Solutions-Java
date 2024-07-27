@@ -33,8 +33,7 @@ class Solution {
             // slidingwindow(right - left) - maxCount of Alpha in that window
             // should not exceed k
             if ((right - left + 1) - maxCount > k) {
-                arr[s.charAt(left) - 'A']--;
-                left++;
+                arr[s.charAt(left++) - 'A']--;
             }
             ans = Math.max(ans, (right - left + 1));
         }
