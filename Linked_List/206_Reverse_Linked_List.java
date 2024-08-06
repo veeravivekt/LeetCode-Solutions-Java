@@ -44,4 +44,15 @@ class Solution {
     }
 }
 //Recursion
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        return rev(head, null);
+    }
 
+    public ListNode rev(ListNode current, ListNode prev) {
+        if (current == null) return prev;
+        ListNode next = current.next;
+        current.next = prev;
+        return rev(next, current);
+    }
+}
