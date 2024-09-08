@@ -8,3 +8,16 @@ class Solution {
         return pairCount;
     }
 }
+
+// HashMap Solution
+class Solution {
+    public int numIdenticalPairs(int[] nums) {
+        HashMap<Integer,Integer> map = new HashMap<>();
+        int pairCount = 0;
+        for (int n: nums) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+            pairCount += map.get(n) - 1;
+        }
+        return pairCount;
+    }
+}
