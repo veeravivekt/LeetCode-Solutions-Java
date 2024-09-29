@@ -1,4 +1,4 @@
-lass Solution {
+class Solution {
 public boolean isBalanced(TreeNode root) {
     return dfs(root).getKey();
 }
