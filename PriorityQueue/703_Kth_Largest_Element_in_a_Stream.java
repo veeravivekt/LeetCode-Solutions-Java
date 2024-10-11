@@ -3,7 +3,7 @@ class KthLargest {
     int k;
     public KthLargest(int k, int[] nums) {
         this.k = k;
-        for (int n: nums) add(n);
+        for (int n: nums) add(n); // why does this work you ask? coz the return value for calling this is doing nothing. The other calls are calling add function directly
     }
 
     public int add(int val) {
